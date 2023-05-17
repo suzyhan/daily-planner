@@ -8,7 +8,8 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
+  
+  // This function saves the user input in local storage.
   function userInput() {
     $('.saveBtn').on('click', function() {
       const key = $(this).parent().attr('id');
@@ -22,16 +23,55 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+ 
+  const currentHour = dayjs().format('H');
+  console.log(currentHour);
+  
+  function hourColor() {
+    $('.time-block').each(function() {
+      const hourBlock = parseInt(this.id);
+      console.log(hourBlock);
+      $(this).toggleClass('past', hourBlock < currentHour);
+      $(this).toggleClass('present', hourBlock === currentHour);
+      $(this).toggleClass('future', hourBlock > currentHour);
+    });
+  }
+
+  function updateColor() {
+    $('.time-block').each(function() {
+      const hourBlock = parseInt(this.id);
+      if (hourBlock == currentHour) {
+        $(this).removeClass('past future').addClass('present');
+      } else if (hourBlock < currentHour) {
+        $(this).removeClass('present future').addClass('past');
+      } else {
+        $(this).removeClass('past present').addClass('future');
+      }
+    })
+  }
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
+
+  // This function gets user input saved in local storage and set the values in textarea.
+  $('.time-block').each(function() {
+    const key = $(this).attr('id');
+    const value = localStorage.getItem(key);
+    $(this).children('.description').val(value);
+  });
+
   // TODO: Add code to display the current date in the header of the page.
+  
+  // This function displays the current date in the format to include day of week, month, day of month, year, and time.
   function getCurrentDate() {
     const currentDate = dayjs().format('dddd, MMMM D, YYYY h:mm A');
     $('#currentDay').text(currentDate);
   }
 
+  // Call functions to have working page
   getCurrentDate();
   userInput();
+  hourColor();
+  updateColor();
 });
