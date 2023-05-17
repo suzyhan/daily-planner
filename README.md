@@ -1,99 +1,32 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler (daily-planner)
+Module 5 Challenge Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This Work Day Scheduler is a simple calendar application to help plan and manage time efficiently with a busy working schedule. The app allows you to add and save important events for each hour of the day. The use of Day.js library and jQuery creates a dynamic calendar for work day planning. Based on the current hour of the day, the colors indicate whether it is in the past (grey), present (red), or future (green).
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Usage
 
-## User Story
+The current date and time are displayed at the top of the calendar. You can scroll down to view the hourly time blocks for the current day. Select the time block to type in the events rand click the save button on the right. This will save the event in the local storage and upon refreshing the page, you should be able to view the saved changes on the calendar. Based on the current hour of the day, the colors indicate whether it is in the past (grey), present (red), or future (green).
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+![Screenshot for work day scheduler](./assets/Screenshot_work_day_scheduler.png)
 
 The following animation demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/05-third-party-apis-homework-demo.gif)
 
-## Grading Requirements
+Link to deployed application: 
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Credits
 
-This Challenge is graded based on the following criteria:
+Day.js (https://day.js.org/) library and jQuery UI (https://jqueryui.com/) were used to create a dynamic scheduler. 
 
-### Technical Acceptance Criteria: 40%
+Reviews of the following tutorials used to build the application:
 
-* Satisfies all of the above acceptance criteria plus the following:
+https://www.w3schools.com/
 
-  * Uses a date utility library to work with date and time
+https://developer.mozilla.org/en-US/
 
-### Deployment: 32%
+## License
 
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+None
