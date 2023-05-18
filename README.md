@@ -3,7 +3,7 @@ Module 5 Challenge Third-Party APIs: Work Day Scheduler
 
 ## Description
 
-This Work Day Scheduler is a simple calendar application to help plan and manage time efficiently with a busy working schedule. The app allows you to add and save important events for each hour of the day. The use of Day.js library and jQuery creates a dynamic calendar for work day planning. Based on the current hour of the day, the colors indicate whether it is in the past (grey), present (red), or future (green).
+This Work Day Scheduler is a simple calendar application to help plan and manage time efficiently with a busy working schedule. The app allows you to add and save important events for each hour of the day. The use of Day.js library and jQuery creates a dynamic calendar for work day planning.
 
 ## Usage
 
